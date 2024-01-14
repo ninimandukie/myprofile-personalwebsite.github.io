@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!--=============== FAVICON ===============-->
+      <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+      <!--=============== REMIXICONS ===============-->
+      <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+
+      <!--=============== CSS ===============-->
+      <link rel="stylesheet" href="assets/css/styles.css">
+
+      <title>Activity 4</title>
+   </head>
+   <body>
+      <!--==================== HEADER ====================-->
+      <header class="header" id="header">
+         <nav class="nav container">
+            <a href="#" class="nav__logo">
+               TourGuide
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+               <ul class="nav__list">
+                  <li class="nav__item">
+                     <a href="#home" class="nav__link active-link">Home</a>
+                  </li>
+
+                  <li class="nav__item">
+                     <a href="#about" class="nav__link">About</a>
+                  </li>
+
+                  <li class="nav__item">
+                     <a href="#popular" class="nav__link">Popular</a>
+                  </li>
+
+                  <li class="nav__item">
+                     <a href="#explore" class="nav__link">Explore</a>
+                  </li>
+               </ul>
+
+               <!--Close button-->
+               <div class="nav__close" id="nav-close">
+                  <i class="ri-close-line"></i>
+               </div>
+            </div>
+
+            <!--Toggle button-->
+            <div class="nav__toggle" id="nav-toggle">
+               <i class="ri-menu-line"></i>
+            </div>
+         </nav>
+      </header>
+
+      <!--==================== MAIN ====================-->
+      <main class="main">
+         <!--==================== HOME ====================-->
+         <section class="home section" id="home">
+            <img src="assets/img/homepage.jpg" alt="home image" class="home__bg">
+            <div class="home__shadow"></div>
+
+            <div class="home__container container grid">
+               <div class="home__data">
+                  <h3 class="home__subtitle">
+                     Welcome to TourGuide
+                  </h3>
+
+                  <h1 class="home__title">
+                     Discover the <br> Best Tourist Spots 
+                  </h1>
+                  <p class="home__description">
+                     Live the trips exploring the world, Discover
+                     paradises, islands, mountains, <br>and much
+                     more so you can plan your trip asap!
+                  </p>
+
+                  <a href="#" class="button">
+                     Discover Now <i class="ri-arrow-right-line"></i>
+                  </a>
+               </div>
+
+               <div class="home__cards grid">
+                  <article class="home__card" onclick="location.href='#popular1';" style="cursor: pointer;">
+                     <img src="assets/img/asia.jpg" alt="home image" class="home__card-img">
+                     <h3 class="home__card-title">Asia</h3>
+                     <div class="home__card-shadow"></div>
+                  </article>
+
+                  <article class="home__card" onclick="location.href='#popular2';" style="cursor: pointer;">
+                     <img src="assets/img/america.jpg" alt="home image" class="home__card-img">
+                     <h3 class="home__card-title">America</h3>
+                     <div class="home__card-shadow"></div>
+                  </article>
+
+                  <article class="home__card" onclick="location.href='#popular3';" style="cursor: pointer;">
+                     <img src="assets/img/europe.jpg" alt="home image" class="home__card-img">
+                     <h3 class="home__card-title">Europe</h3>
+                     <div class="home__card-shadow"></div>
+                  </article>
+               </div>
+            </div>
+         </section>
+
+         <!--==================== ABOUT ====================-->
+         <section class="about section" id="about">
+            <div class="about__container container grid">
+               <div class="about__data">
+                  <h2 class="section__title">
+                     learn more <br>
+                     about TourGuide
+                  </h2>
+
+                  <p class="about__description">
+                     All the tourist spots around the world are a great 
+                     pleasure and happiness for anyone who likes 
+                     travels. Get an idea on where you wanna land
+                     on your next trip safely, and without worries
+                     here at TourGuide.
+                  </p>
+
+                  <a href="#" class="button">
+                     Explore TourGuide <i class="ri-arrow-right-line"></i>
+                  </a>
+               </div>
+
+               <div class="about__image">
+                  <img src="assets/img/aboutinfo.jpg" alt="about image" class="about__img">
+                  <div class="about__shadow"></div>
+               </div>
+            </div>
+         </section>
+
+         <!--==================== POPULAR 1 ====================-->
+         <section class="popular section" id="popular1">
+            <h2 class="section__title">
+               Asia<br>
+               (Cambodia, China, Japan)
+            </h2>
+
+            <div class="popular__container container grid">
+               <article class="popular__card">
+                  <div class="popular__image">
+                     <img src="assets/img/SILVER PAGODA.jpg" alt="popular image" class="popular__img">
+                     <div class="popular__shadow"></div>
+                  </div>
+
+                  <h2 class="popular__title">
+                     Phnom Penh Royal Palace
+                  </h2>
+
+                  <div class="popular__location">
+                     <i class="ri-map-pin-line"></i>
+                     <span>Cambodia</span>
+                  </div>
+               </article>
+
+               <article class="popular__card">
+                  <div class="popular__image">
+                     <img src="assets/img/Xinghua_Duotian_Agrosystem.jpg" alt="popular image" class="popular__img">
+                     <div class="popular__shadow"></div>
+                  </div>
+
+                  <h2 class="popular__title">
+                  Xinghua Duotian Agrosystem
+                  </h2>
+
+                  <div class="popular__location">
+                     <i class="ri-map-pin-line"></i>
+                     <span>China</span>
+                  </div>
+               </article>
+
+               <article class="popular__card">
+                  <div class="popular__image">
+                     <img src="assets/img/Kawachi Wisteria Garden.jpg" alt="popular image" class="popular__img">
+                     <div class="popular__shadow"></div>
+                  </div>
+
+                  <h2 class="popular__title">
+                  kawachi Wisteria Garden
+                  </h2>
+
+                  <div class="popular__location">
+                     <i class="ri-map-pin-line"></i>
+                     <span>Japan</span>
+                  </div>
+               </article>
+            </div>
+         </section>
+
+         <!--==================== POPULAR 2 ====================-->
+         <section class="popular section" id="popular2">
+            <h2 class="section__title">
+               America<br>
+               (The bahamas, Mexico, USA)
+            </h2>
+
+            <div class="popular__container container grid">
+               <article class="popular__card">
+                  <div class="popular__image">
+                     <img src="assets/img/Treasure cay beach, Great Abaco Island.jpg" alt="popular image" class="popular__img">
+                     <div class="popular__shadow"></div>
+                  </div>
+
+                  <h2 class="popular__title">
+                     treasure Cay beach, Great Abaco Island
+                  </h2>
+
+                  <div class="popular__location">
+                     <i class="ri-map-pin-line"></i>
+                     <span>The Bahamas</span>
+                  </div>
+               </article>
+
+               <article class="popular__card">
+                  <div class="popular__image">
+                     <img src="assets/img/Grand Canyon - Sunset.jpg" alt="popular image" class="popular__img">
+                     <div class="popular__shadow"></div>
+                  </div>
+
+                  <h2 class="popular__title">
+                  Grand Canyon
+                  </h2>
+
+                  <div class="popular__location">
+                     <i class="ri-map-pin-line"></i>
+                     <span>USA</span>
+                  </div>
+               </article>
+
+               <article class="popular__card">
+                  <div class="popular__image">
+                     <img src="assets/img/Chichen Itza.jpg" alt="popular image" class="popular__img">
+                     <div class="popular__shadow"></div>
+                  </div>
+
+                  <h2 class="popular__title">
+                  Chichen Itza
+                  </h2>
+
+                  <div class="popular__location">
+                     <i class="ri-map-pin-line"></i>
+                     <span>Mexico</span>
+                  </div>
+               </article>
+            </div>
+         </section>
+
+         <!--==================== POPULAR 3 ====================-->
+         <section class="popular section" id="popular3">
+            <h2 class="section__title">
+               Europe<br>
+               (France, Sweden, Spain)
+            </h2>
+
+            <div class="popular__container container grid">
+               <article class="popular__card">
+                  <div class="popular__image">
+                     <img src="assets/img/Louvre Museum (Musée du Louvre).jpg" alt="popular image" class="popular__img">
+                     <div class="popular__shadow"></div>
+                  </div>
+
+                  <h2 class="popular__title">
+                  Louvre Museum (Musée du Louvre)
+                  </h2>
+
+                  <div class="popular__location">
+                     <i class="ri-map-pin-line"></i>
+                     <span>France</span>
+                  </div>
+               </article>
+
+               <article class="popular__card">
+                  <div class="popular__image">
+                     <img src="assets/img/Drottningholm Palace.jpg" alt="popular image" class="popular__img">
+                     <div class="popular__shadow"></div>
+                  </div>
+
+                  <h2 class="popular__title">
+                  Drottningholm Palace
+                  </h2>
+
+                  <div class="popular__location">
+                     <i class="ri-map-pin-line"></i>
+                     <span>Sweden</span>
+                  </div>
+               </article>
+
+               <article class="popular__card">
+                  <div class="popular__image">
+                     <img src="assets/img/Seville Cathedral and Alcazar (Seville).jpg" alt="popular image" class="popular__img">
+                     <div class="popular__shadow"></div>
+                  </div>
+
+                  <h2 class="popular__title">
+                  Seville Cathedral and Alcazar (Seville)
+                  </h2>
+
+                  <div class="popular__location">
+                     <i class="ri-map-pin-line"></i>
+                     <span>Spain</span>
+                  </div>
+               </article>
+            </div>
+         </section>
+         
+         <!--==================== EXPLORE ====================-->
+         <section class="explore section" id="explore">
+           <div class="explore__container">
+            <div class="explore__image">
+               <img src="assets/img/exploreimg.jpg" alt="explore image" class="explore__img">
+               <div class="explore__shadow"></div>
+            </div>
+
+            <div class="explore__content container grid">
+               <div class="explore__data">
+                  <h2 class="section__title">
+                     Explore the<br>
+                     Best Places.
+                  </h2>
+
+                  <p class="explore__description">
+                     Embark on a visual journey as you navigate through 
+                     our user-friendly interface, where each click unveils a 
+                     new vista waiting to be explored. Whether you're a 
+                     seasoned traveler seeking nostalgia or an armchair adventurer 
+                     dreaming of future destinations, TourGuide is your 
+                     window to the world.
+                  </p>
+               </div>
+            </div>
+         </div>
+      </section>
+         
+         <!--==================== JOIN ====================-->
+         <section class="join section">
+           <div class="join__container container grid">
+            <div class="join__data">
+               <h2 class="section__title">
+                  Your Journey<br>
+                  starts here
+               </h2>
+
+               <p class="join__description">
+                  Get up to date with the latest 
+                  travel and information from us.
+               </p>
+
+               <form action="" class="join__form">
+                  <input type="email" placeholder="Enter your email" class="join__input">
+
+                  <button class="join__button button">
+                     Subscribe Our Newsletter<i class="ri-arrow-right-line"></i>
+                  </button>
+               </form>
+            </div>            
+         </section>
+      </main>
+
+      <!--==================== FOOTER ====================-->
+      <footer class="footer">
+         <div class="footer__container container grid">
+            <div class="footer__content grid">
+               <a href="#" class="footer__logo"></a>
+
+               <p class="footer__description">
+                  Travel with us and explore<br>
+                  the world without limits
+               </p>
+            </div>
+
+            <div class="footer__data grid">
+               <div>
+                  <h3 class="footer__title">About</h3>
+
+                  <ul class="footer__links">
+                     <li>
+                        <a href="#" class="footer__link">About Us</a>
+                     </li>
+
+                     <li>
+                        <a href="#" class="footer__link">Features</a>
+                     </li>
+
+                     <li>
+                        <a href="#" class="footer__link">News & Blog</a>
+                     </li>
+                  </ul>
+               </div>
+
+               <div>
+                  <h3 class="footer__title">Contact</h3>
+
+                  <ul class="footer__links">
+                     <li>
+                        <a href="#" class="footer__link">Call Center</a>
+                     </li>
+
+                     <li>
+                        <a href="#" class="footer__link">Support center</a>
+                     </li>
+
+                     <li>
+                        <a href="#" class="footer__link">Contact Us</a>
+                     </li>
+                  </ul>
+               </div>
+
+               <div>
+                  <h3 class="footer__title">Support</h3>
+
+                  <ul class="footer__links">
+                     <li>
+                        <a href="#" class="footer__link">Privacy Policy</a>
+                     </li>
+
+                     <li>
+                        <a href="#" class="footer__link">terms & services</a>
+                     </li>
+
+                     <li>
+                        <a href="#" class="footer__link">Payments</a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+
+            <span class="footer__copy">
+                 &#169; Copyright @ShaunReyRostata. All rights reserved
+               </span>
+
+            </div>
+         </div>
+      </footer>
+
+      <!--========== SCROLL UP ==========-->
+      <a href="#" class="scrollup" id= "scroll-up">
+         <i class="ri-arrow-up-line"></i>
+      </a>
+
+
+      <!--=============== MAIN JS ===============-->
+      <script src="assets/js/main.js"></script>
+   </body>
+</html>

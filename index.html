@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Website</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  </head>
+  <body>
+
+    <header>
+      <a href="#" class="brand">MyProfile</a>
+      <div class="menu-btn"></div>
+      <div class="navigation">
+        <div class="navigation-items">
+          <a href="#">Home</a>
+          <a href="#">About Me</a>
+          <div class="dropdown">
+            <a href="#" class="activities-header">Activities</a> 
+            <div class="dropdown-content">
+               <a href="IT2D273/act1ROSTATA.html">Activity 1</a>
+               <a href="IT2D273/act2Rostata.html">Activity 2</a>
+               <a href="IT2D273/act3Rostata.html">Activity 3</a>
+               <a href="responsive tourist website/tourismwebsite.html">Activity 4</a>
+               <a href="IT2D273/act5Rostata.html">Activity 5</a>
+            </div>
+          </div>
+          <a class="#" href="#gallery">Gallery</a>
+          <a class="#" href="#contact">Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="home" id="gallery">
+      <video class="video-slide active" src="assets/images/video_background.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="assets/images/01.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="assets/images/02.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="assets/images/03.mp4" autoplay muted loop></video>
+          <div class="content active">
+            <h1>HELLO<br><span>WORLD.</span></h1>
+            <p>🐟 Hi there! I'm Shaun Rey P. Rostata, a passionate individual on a 
+                journey of discovery and learning. Currently, I am a dedicated 
+                BSIT (Bachelor of Science in Information Technology) student, 
+                pursuing my academic endeavors at the esteemed Eastern Visayas 
+                State University (EVSU).
+            </p>
+            <a href="#" class="a">Welcome Visitor!</a>
+          </div>
+
+          <div class="content about-me">
+            <img src="assets/images/profile.jpg" alt="Shaun Rey" class="profile-image">
+            <h1>ABOUT<br><span>ME...</span></h1>
+            <p> Name: Shaun Rey P. Rostata | Born: Nov. 16, 2003 
+                | Address: Brgy. 39, Calvary Hill Tacloban City |
+                Course/Yr./Sec.: BSIT- 2D | Hobbies: Drawing, Listening to Music,
+                Editing, Video Editing, Coding.<br><br>
+                Stan-list: Ayesha Ero, Newjeans, 
+                Pinkpantheress, Blackpink, Paris hilton,
+                Red Velvet, Sophie, Miss luxury, Mary J.
+                Blige, Mariah Carey, Destiny's Child, 
+                ThatKid, Miss Bashful, Ive, Azealia
+                Banks, Jenevieve, Janet Jackson,
+                Samantha Mumba, Ashlee Simpson, Blaque,
+                Aespa, Slayyyter, MoKenStaff, Gwen Stefani, Heidi Montag.
+            </p>
+            <p> i love frutiger aero!!!!!</p>
+          </div>
+
+          <div class="content gallery__container container grid">
+            <h1>GALLERY</h1>
+            <article class="gallery__card">
+              <div class="gallery__image">
+                <img src="assets/images/img_1.jpg" alt="gallery image" class="gallery__img">
+                <div class="gallery__shadow"></div>
+              </div>
+          
+              <div class="gallery__image">
+                <img src="assets/images/img_2.gif" alt="gallery gif" class="gallery__img">
+                <div class="gallery__shadow"></div>
+              </div>
+          
+              <div class="gallery__image">
+                <img src="assets/images/img_3.jpg" alt="gallery image" class="gallery__img">
+                <div class="gallery__shadow"></div>
+              </div>
+            </article>
+          </div>          
+
+          <div class="content">
+            <h1>MY<br><span>CONTACTS.</span></h1>
+            <p> Welcome to our Contacts page! We're thrilled to connect with you. 
+                If you have any questions, concerns, or just want to say hello, 
+                feel free to reach out using the following contact details.<br>
+                <b>Call: +639268004962</b>
+            </p>
+          </div>
+
+          <div class="media-icons">
+            <a href="https://www.facebook.com/https://web.facebook.com/shaunrey.rostata.9/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/https://www.instagram.com/missbaejoohyunbabo/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/https://twitter.com/HaerinLovesit" target="_blank"><i class="fab fa-twitter"></i></a>
+         </div>
+
+        <div class="slider-navigation">
+          <div class="nav-btn active"></div>
+          <div class="nav-btn"></div>
+          <div class="nav-btn"></div>
+          <div class="nav-btn"></div>
+        </div>  
+    </section>
+
+      <script type="text/javascript">
+       document.addEventListener("DOMContentLoaded", function () {
+  const menuBtn = document.querySelector(".menu-btn");
+  const navigation = document.querySelector(".navigation");
+
+  menuBtn.addEventListener("click", () => {
+    menuBtn.classList.toggle("active");
+    navigation.classList.toggle("active");
+  });
+
+  // Header navigation functionality for Home, About, Gallery, and Contact
+  const headerNavLinks = document.querySelectorAll(".navigation .navigation-items a:not(.activities-header)");
+
+  headerNavLinks.forEach((link, i) => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      sliderNav(i);
+    });
+  });
+
+  const btns = document.querySelectorAll(".nav-btn");
+
+  btns.forEach((btn, i) => {
+    btn.addEventListener("click", () => {
+      sliderNav(i);
+    });
+  });
+
+  // dropdown functions on activities
+  const dropdownLinks = document.querySelectorAll(".dropdown-content a");
+
+  dropdownLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      const href = link.getAttribute("href");
+      window.location.href = href;
+    });
+  });
+
+  // Slider Nav Function
+  const sliderNav = function (manual) {
+    const btns = document.querySelectorAll(".nav-btn");
+    const slides = document.querySelectorAll(".video-slide");
+    const contents = document.querySelectorAll(".content");
+
+    if (slides.length > 0 && manual >= 0 && manual < btns.length) {
+      btns.forEach((btn) => {
+        btn.classList.remove("active");
+      });
+
+      slides.forEach((slide) => {
+        slide.classList.remove("active");
+      });
+
+      contents.forEach((content) => {
+        content.classList.remove("active");
+      });
+
+      btns[manual].classList.add("active");
+      slides[manual].classList.add("active");
+      contents[manual].classList.add("active");
+    } else {
+      console.error("Invalid manual index:", manual);
+    }
+  };
+});
+      </script>
+  </body>
+</html>    
+    

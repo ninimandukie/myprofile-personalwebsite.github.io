@@ -1,0 +1,502 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+header{
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 200px;
+  transition: 0.5s, ease;
+  background: #0514e3;
+}
+
+header .brand{
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+
+}
+
+header .navigation{
+  position: relative;
+}
+
+header .navigation .navigation-items a{
+  position: relative;
+  color: #fff;
+  font-size: 1em;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 30px;
+  transition: 0.3s ease;
+  
+}
+
+header .navigation .navigation-items a:before{
+  content: '';
+  position: absolute;
+  background: #fff;
+  width: 0%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  transition: 0.3s ease;
+}
+
+header .navigation .navigation-items a:hover::before{
+  width: 100%;
+
+}
+
+/*================ HOME =================*/
+
+section{
+  padding: 100px 200px;
+}
+
+.home{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column; 
+  align-items: center; /* Updated to center items vertically */
+  background: #0514e3;
+}
+
+.home:before{
+  z-index: 777;
+  content: '';
+  position: absolute;
+  background: rgba(86, 96, 232, 0.3);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.home .content{
+  z-index: 888;
+  color: #fff;
+  width: 50%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: none;
+
+}
+
+.home .content.active{
+  display: block;
+}
+
+.home .content h1{
+  font-size: 4em;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  line-height: 75px;
+  margin-bottom: 20px;
+}              
+
+.home .content h1 span{
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.home .content p{
+  margin-bottom: 30px;
+  backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+}
+
+.home .content .a{
+  background: #fff;
+  padding: 15px 35px;
+  color: #1680AC;
+  font-size: 1.1em;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 2px;
+}
+
+/*=============== MEDIA ICONS ===================*/
+.home .media-icons{
+  z-index: 888;
+  position: absolute;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  transition: 0.5s ease;
+}
+
+.home .media-icons a{
+  color: #fff;
+  font-size: 1.6em;
+  transition: 0.3s ease;
+}
+
+.home .media-icons a:not(:last-child){
+  margin-bottom: 20px;
+}
+
+.home .media-icons a:hover{
+  transform: scale(1.3);
+}
+
+/*=================== THE VIDEO ============================*/
+
+.home video{
+  z-index: 000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*==================== THE SLIDER NAV ========================*/
+.slider-navigation{
+  z-index: 888;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(80px);
+  margin-bottom: 12px;
+}
+
+.slider-navigation .nav-btn{
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+  transition: 0.3s ease;
+}
+
+.slider-navigation .nav-btn.active{
+  background: #2696E9;
+}
+
+.slider-navigation .nav-btn:not(:last-child){
+  margin-right: 20px;
+}
+
+.slider-navigation .nav-btn:hover{
+  transform: scale(1.2);
+}
+
+.video-slide{
+  position: absolute;
+  width: 100%;
+  clip-path: circle(0.0% at 0 50%);
+}
+
+.video-slide.active{
+  clip-path: circle(150% at 0 50%);
+  transition: 1s ease;
+  transition-property: clip-path;
+
+}
+
+/*ABOUT PAGE, GALLERY PAGE, AND CONTACTS PAGE ADJUSTMENTS*/
+
+.content .profile-image {
+  border-radius: 10px; /* Adjust the border-radius for rounded edges */
+  margin-right: 20px; /* Adjust the margin to create space between the image and text */
+  width: 100px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  transition: transform 0.3s ease-in-out;
+}
+
+.content .profile-image:hover {
+  transform: scale(1.1); 
+}  
+
+.home .about-me h1{
+  font-size: 3em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  line-height: 45px;
+  margin-bottom: 15px;
+}
+.home .about-me p {
+  font-size: 1.2em;
+}
+
+.home .about-me h1 span {
+  font-size: 1em; 
+  font-weight: 600; 
+  
+}  
+
+.content .gallery__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  justify-content: center; /* Center the grid horizontally */
+}
+
+.content .gallery__image{
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.content .gallery__img {
+  transition: transform 4s;
+  width: 80%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.content .gallery__shadow{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, 
+               hsla(0, 0%, 0%, 0) 50%
+               hsl(0, 0%, 0%) 125%);
+}
+
+.content .gallery__image:hover .gallery__img{
+  transform: scale(1.2);
+}
+
+
+
+/*============= FOR MEDIUM DEVICES ===================*/
+@media(max-width: 1040px){
+  header{
+    padding: 12px 20px;
+  }
+
+  section{
+    padding: 100px 19px;
+  }
+
+  .home .media-icons{
+    right: 15px;
+  }
+
+  header .navigation{
+    display: none;
+    flex-direction: column; /* Adjusted for better mobile view */
+    align-items: center;
+  }
+
+  header .navigation.active{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(1, 1, 1, 0.5);
+  }
+
+  header .navigation.active .navigation-items a {
+    color: #222;
+    font-size: 1.2em;
+    margin: 10px;
+    text-align: center; 
+}
+
+header .navigation .navigation-items a:before{
+  background: #222;
+  height: 5px;
+}
+ 
+header .navigation.active .navigation-items{
+  background: #fff;
+  width: auto;
+  max-width: 600px;
+  margin: 20px;
+  padding: 40px;
+  border-radius: 5px;
+  box-shadow: 0 5px 25px rgb(1 1 1/20%);
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; 
+}
+
+  .menu-btn{
+    background: url(menu.png)no-repeat;
+    background-size: 30px;
+    background-position: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    z-index: 1;
+  }
+
+
+  .menu-btn.active{
+   z-index: 999;
+   background: url(close.png)no-repeat;
+   background-size: 25px;
+   background-position: center;
+   transition: 0.3s ease;
+  }
+}  
+
+/*==== FOR LARGE DEVICES ====*/
+@media screen and (min-width: 1023px){
+
+  .content .gallery__container{
+    grid-template-columns: repeat(3, 240px);
+  }
+} 
+
+@media screen and (min-width: 1152px){
+
+  .container{
+    margin-inline: auto;;
+  } 
+  .content .gallery_card{
+    grid-template-columns: repeat(3, 300px);
+    column-gap: 3rem;
+    padding-top: 4rem;
+  }
+
+
+  /* Adjusted Navigation Styles for Dropdown */
+  header .navigation .navigation-items .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  header .navigation .navigation-items .activities-dropdown {
+    position: relative;
+    color: #fff;
+    font-size: 1em;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: 0.3s ease;
+  }
+
+  header .navigation .navigation-items .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #0514e3; /* Dropdown background color */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    min-width: 160px;
+  }
+
+  header .navigation .navigation-items .dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    display: block;
+    text-decoration: none;
+    transition: background 0.3s ease; /* Smooth transition on hover */
+  }
+
+  header .navigation .navigation-items .dropdown-content a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Hover background color */
+  }
+
+  /* Show dropdown content on hover */
+  header .navigation .navigation-items .dropdown:hover .dropdown-content {
+     display: block;
+  }
+
+  /* Additional adjustments for smoother hover */
+  header .navigation .navigation-items a:hover::before {
+     width: 100%;
+     background: rgba(255, 255, 255, 0.5);
+  }
+
+  header .navigation .navigation-items .dropdown:hover .activities-dropdown {
+     color: #2696E9; /* Adjusted color on hover */
+  }
+
+}
+
+/* Adjusted Navigation Styles for Dropdown */
+header .navigation .navigation-items .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+header .navigation .navigation-items .activities-dropdown {
+  position: relative;
+  color: #fff;
+  font-size: 1em;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 30px;
+  transition: 0.3s ease;
+}
+
+header .navigation .navigation-items .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #0514e3; /* Dropdown background color */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  min-width: 160px;
+}
+
+header .navigation .navigation-items .dropdown-content a {
+  color: #fff;
+  padding: 12px 16px;
+  display: block;
+  text-decoration: none;
+  transition: background 0.3s ease; /* Smooth transition on hover */
+}
+
+header .navigation .navigation-items .dropdown-content a:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Hover background color */
+}
+
+/* Show dropdown content on hover */
+header .navigation .navigation-items .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Additional adjustments for smoother hover */
+header .navigation .navigation-items a:hover::before {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+header .navigation .navigation-items .dropdown:hover .activities-dropdown {
+  color: #2696E9; /* Adjusted color on hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+
